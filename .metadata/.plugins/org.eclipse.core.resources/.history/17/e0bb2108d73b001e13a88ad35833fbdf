@@ -1,0 +1,67 @@
+package kb.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class LoginCheckServlet extends HttpServlet {
+	private String dbId, dbPwd;
+	
+	
+	public LoginCheckServlet() {
+		//Servlet Constructor
+		
+		System.out.println("LoginServlet Contructor");
+	}
+	
+	
+	@Override
+	public void init() throws ServletException {
+		//init-param 정보 가져오기
+		dbId = super.getInitParameter("dbId");
+		dbPwd = super.getInitParameter("dbPwd");
+		
+		System.out.println("init");
+	}
+	
+//	@Override
+//	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+//		System.out.println("service");
+//	}
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		//req.setCharacterEncoding("UTF-8");
+		
+		System.out.println("dopost");
+		//전송된 데이터 받기
+		String id = req.getParameter("userId");
+		String pwd = req.getParameter("userPwd");
+		String name = req.getParameter("userName");
+		
+		
+		if(dbId.equals(id) && dbPwd.equals(pwd)) {
+			req.getRequestDispatcher("LoginOk.jsp").forward(req, resp);
+			System.out.println("일치");
+		}else {		
+			resp.setContentType("text/html; charset=UTF-8");
+			//오류메시지
+			PrintWriter out = resp.getWriter();
+			out.print("<script>"
+					+ "alert('"+name+"님 정보를 다시 확인해주세요.');"
+					+ "location.href = 'LoginForm.html';"
+					+ "</script>"
+					
+					);
+			//폼으로 다시 이동
+			
+//			resp.sendRedirect("LoginForm.html");
+		}
+	}
+	
+}
