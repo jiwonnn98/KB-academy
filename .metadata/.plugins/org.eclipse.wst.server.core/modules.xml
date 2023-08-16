@@ -5,4 +5,5 @@
   <module moduleId="org.eclipse.jst.jee.server:step01_HTML" serverId="Tomcat v9.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:step05_servlet" serverId="Tomcat v9.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:FE_WS" serverId="Tomcat v9.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:step06_JspExam" serverId="Tomcat v9.0 Server at localhost"/>
 </modules>

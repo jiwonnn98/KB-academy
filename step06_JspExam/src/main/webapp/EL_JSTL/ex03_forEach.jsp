@@ -7,11 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<script>
-alert("<%= request.getParameter("userName")%>님 <%=request.getAttribute("errMsg")%>" );
-//location.href = "LoginForm.html";
-history.back();
-</script>
+
+<a href="<%=application.getContextPath()%>/info">정보 가져오기</a>
+<a href="${pageContext.request.contextPath }/info">정보 가져오기</a>
 
 </body>
 </html>
