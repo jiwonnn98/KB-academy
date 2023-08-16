@@ -1,0 +1,7 @@
+INDEX VERSION 1.134
+C:\Users\jiwon\web_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\304396474.index
+\BE_WS_01\src\main\java
+C:\Users\jiwon\web_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1095617628.index
+\step05_servlet\src\main\java
+C:\Users\jiwon\web_workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\49712236.index
+\step01_HTML\src\main\java

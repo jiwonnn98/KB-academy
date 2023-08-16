@@ -1,0 +1,13 @@
+127.0.0.1 - - [13/Aug/2023:22:12:04 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [13/Aug/2023:22:12:05 +0900] "GET /FE_HW_01/formSet.html HTTP/1.1" 200 3987
+0:0:0:0:0:0:0:1 - - [13/Aug/2023:22:12:05 +0900] "GET /favicon.ico HTTP/1.1" 404 818
+0:0:0:0:0:0:0:1 - - [13/Aug/2023:22:17:52 +0900] "GET /FE_HW_01/formGet.html HTTP/1.1" 200 5016
+0:0:0:0:0:0:0:1 - - [13/Aug/2023:22:24:24 +0900] "GET /FE_HW_01/formGet.html HTTP/1.1" 200 5622
+0:0:0:0:0:0:0:1 - - [13/Aug/2023:22:27:23 +0900] "GET /FE_HW_01/formGet.html HTTP/1.1" 200 6397
+0:0:0:0:0:0:0:1 - - [13/Aug/2023:22:33:51 +0900] "GET /FE_HW_01/formGet.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [13/Aug/2023:22:35:30 +0900] "GET /FE_HW_01/formSet.html HTTP/1.1" 200 5936
+0:0:0:0:0:0:0:1 - - [13/Aug/2023:22:53:34 +0900] "GET /step06_bootStrapMovie/index.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [13/Aug/2023:22:56:18 +0900] "GET /step06_bootStrapMovie/index.html HTTP/1.1" 200 6175
+0:0:0:0:0:0:0:1 - - [13/Aug/2023:22:56:22 +0900] "GET /step06_bootStrapMovie/media/returns.mp4 HTTP/1.1" 206 2875389
+0:0:0:0:0:0:0:1 - - [13/Aug/2023:22:56:23 +0900] "GET /favicon.ico HTTP/1.1" 404 818
+0:0:0:0:0:0:0:1 - - [13/Aug/2023:22:56:27 +0900] "GET /step06_bootStrapMovie/media/captain.mp4 HTTP/1.1" 206 3068270

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<style>
+	table{width: 600px ; height:auto; border: 5px inset green}
+	th,td{text-align:center; border:1px solid gray}
+</style>
+ <script src="../js/jquery-3.6.1.min.js"></script>
+
+<script>
+	$(function () { 
+		$("#send").click(function(){
+			//ajax 통신
+			$.ajax({
+				url: "ex01_serverPage.json", //통신할 서버의 주소
+				type: "post",	//
+				dataType: "json",	//서버가 보내오는 응답 ㄷ이터 타입 (text| html | json | xml)
+				//data:,	//서버에게 전달할 데이터 파라미터 정보
+				success: function(result, status){
+					alert(result + "/ " +status);
+					// $.each(result, function(index, item){
+					// 	alert(index+", " + item+", " + item.name + this.name + ", " + $(this).name);
+					// })
+				},
+				error:function(err, status){
+					alert(err + " 발생했어요 status : " + status);
+				}
+			});
+		});
+	})
+</script>
+
+</head>
+<body>
+	<a href="#" id="send">데이터가져오기</a><p/>
+	
+  <table id="table">
+  	  <tr>
+  	  	<th>이름</th>
+		<th>나이</th>
+		<th>주소</th>
+  	  </tr>
+  	  <!-- 결과 출력!! -->
+  </table>
+</body>
+</html>
+
+
+

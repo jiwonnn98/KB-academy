@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT's KB - login</title>
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+  <link rel="stylesheet" type="text/css" href="css/navbar.css">
+  <link rel="stylesheet" type="text/css" href="css/footer.css">
+  
+  <!-- login.html 문서에 적용할  CSS -->
+  <style type="text/css">
+    /*
+      #login에
+      1) 상하 20px, 좌우 0 패딩설정
+    */
+    #login{
+     padding:20px 0;
+    }
+    
+    /*
+      #login h1에
+      1) 상하좌우여백 5px
+      2) 글자 가운데 정렬
+    */
+     #login h1{
+      padding: 5px;
+      text-align: center;;
+    }
+    
+     /*
+      #login form에
+      1) 높이 200px설정
+      2) border 속성을 1px solid gray 설정
+      3) 상하좌우패딩 40px
+    */
+    
+      #login form{
+       height: 200px;
+       border: 1px solid gray;
+       padding: 40px;
+    }
+    
+    /*
+       #login .form-item에
+       1) margin-bottom을 10px설정
+    */
+     #login .form-item{
+       margin-bottom: 10px;
+    }
+    
+    /*
+      #login .form-item label에
+      1) display속성을 inline-block 으로 설정
+      2) 가로길이를 100px설정
+      3) 글자크기 18px설정
+    */
+      #login .form-item label{
+       display: inline-block;
+       width: 100px;
+       font-size: 18px;
+    }
+    
+    /*
+      #login .form-item input 에
+      1) display속성을 inline-block 으로 설정
+      2) 가로길이를 200px설정
+      3) 글자크기 18px설정
+    */
+    #login .form-item input{
+       display: inline-block;
+       width: 200px;
+       font-size: 18px;
+    }
+    
+    /*
+      #login button 에
+      1) float속성을 오른쪽
+      2) 가로길이를 80px설정
+      3) 글자크기 18px설정
+      4) 상하좌우 패딩을 5px
+      5) margin-top을 10px
+    */
+    #login button{
+      float: right;
+      width: 80px;
+      font-size: 18px;
+      padding: 5px;
+      margin-top: 10px;
+    }
+    
+  </style>
+  
+  <script type="text/javascript">
+    /*
+    1) 로그인 button 에 id 를 부여하고, button 이 click 되면
+      입력된 이메일과 비밀번호의 값이 있는지를 체크하여 값이 없으면 각 상황에 맞는 
+      오류메시지를 alert() 로 출력하고 입력 값이 없는 곳에 커서를 놓고 함수를 빠져나간다.
+       이 때, form 의 default action 을 막는다.
+       id, pwd 모두 값이 있으면 alert(“입력유무체크 완료”) 메시지를 출력하고 
+       form 의 default action 을 막는다.
+       
+       참고 : WS_01, WS_02 에서 아이디 입력상자가 이메일로 변경되었음.
+    */
+
+    onload = function(){
+      document.querySelector("#buttonLogin").onclick = function(e){
+        let email = document.querySelector("#email");
+        let pwd = document.querySelector("#password");
+
+        if(email.value===""){
+          alert("이메일을 입력해주세요");
+          email.focus();
+          return false;
+        }
+
+        if(pwd.value===""){
+          
+        }
+      }
+    }
+  
+   
+  </script>
+</head>
+<body>
+<div id="container">
+  <nav id="navbar">
+    <!-- 5개의 메뉴생성 -->
+      <ul>
+        <li class="nav-item logo"><img src="images/logo.jpg" alt="로고입니다." ></li>
+        <li class="nav-item"> <a href="personal.html">개인</a></li>
+        <li class="nav-item"><a href="busines.html">기업</a></li>
+        <li class="nav-item"><a href="login.html">로그인</a></li>
+        <li class="nav-item"><a href="register.html">회원가입</a></li>
+      </ul>
+    </nav>
+    
+    <div id="banner">지금 당신의 행복! IT's KB Life!</div> 
+ 
+ <div id="login">
+  <h1>Login</h1>
+  <form action="" method="post">
+   <div class="form-item">
+   <label for="email">이메일</label>
+    <input type="text" id="email" name="email">
+    </div>
+   
+   <div class="form-item">
+    <label for="password">비밀번호</label>
+    <input type="password" id="password" name="password">
+    </div>
+    
+    <hr>
+    <button id="btnLogin">로그인</button>
+  </form>
+</div>   
+
+     <footer>
+      <ul>
+        <li>서울시 선릉역 We-Work</li>
+        <li>02-0000-0000</li>
+      </ul>
+    </footer>
+ 
+    
+ </div>
+</body>
+</html>

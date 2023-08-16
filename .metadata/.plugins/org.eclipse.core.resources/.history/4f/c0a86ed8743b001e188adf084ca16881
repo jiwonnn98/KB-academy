@@ -1,0 +1,13 @@
+package kb.servlet;
+
+import javax.servlet.http.HttpServlet;
+
+public class LoginCheckServlet extends HttpServlet {
+	
+	public LoginCheckServlet() {
+		//Servlet Constructor
+		
+		System.out.println("LoginServlet Contructor");
+	}
+	
+}

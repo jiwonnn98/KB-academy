@@ -1,0 +1,28 @@
+package kb.servlet;
+
+import java.io.IOException;
+import java.net.URLEncoder;
+
+import javax.security.auth.message.callback.PrivateKeyCallback.Request;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class BloodCheckServlet extends HttpServlet {
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String name = req.getParameter("name");
+		String blood = req.getParameter("blood");
+		
+		//System.out.println(name + " " + blood);
+		
+		//전송된 혈액형에 따른 페이지로 이동
+		//redirect 방식
+//		name = URLEncoder.encode(name, "UTF-8");
+//		resp.sendRedirect(blood+".jsp?name=" + name + "&blood=" + blood);
+		
+		//forward 방식
+		req.getRequestDispatcher(blood + ".jsp").forward(req, resp);
+	}
+}

@@ -1,0 +1,66 @@
+package kb.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet 작성하는 방법
+ * 1) HttpServlet 상속
+ * 2) public class 
+ * 3) 필요 메소드 재정의
+ * 4)web.xml or @annocation 등록
+ */
+public class LifeCycleServlet extends HttpServlet {
+	
+	public LifeCycleServlet() {
+		System.out.println("constructor");
+	}
+	
+	@Override
+	public void init() throws ServletException {
+		System.out.println("LifeCycleServlet init call...");
+
+	}
+	
+//	@Override
+//	protected void service(HttpServletRequest arg0, HttpServletResponse arg1) throws ServletException, IOException {
+//		System.out.println("LifeCycleServlet service call...");
+//
+//	}
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		System.out.println("LifeCycleServlet doGet call...");
+		
+		//현재 브라우저에 응답하는 문서의 한글인코딩 설정 필요
+		resp.setContentType("text/html;charset=UTF-8");
+		
+		//브라우저에 출력
+		PrintWriter out = resp.getWriter();
+		out.print("<html>");
+		out.print("<head><title>Servlet Start</title></head>");
+		out.print("<body>");
+		out.println("<h1 style='color:red'> Servlet Start</h1>");
+		out.print("</body>");
+		out.print("</html>");
+		
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		System.out.println("LifeCycleServlet doPost call...");
+
+	}
+
+	@Override
+	public void destroy() {
+		System.out.println("LifeCycleServlet destroy call...");
+
+	}
+	
+}

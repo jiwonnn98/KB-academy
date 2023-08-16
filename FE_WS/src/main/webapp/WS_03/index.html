@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT's KB</title>
+ <link rel="stylesheet" type="text/css" href="css/common.css">
+  <link rel="stylesheet" type="text/css" href="css/navbar.css">
+  <link rel="stylesheet" type="text/css" href="css/footer.css">
+
+ <!-- index.html 에만 적용할 CSS -->
+ <style type="text/css">
+    /*
+      #main에
+      1)  flex 적용
+      2)  justify-content속성을 space-between 적용
+      3)  margin-top 을 5px설정
+    */
+    #main{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 5px;
+     
+    }
+    
+    /*
+       #main .main-item에
+       1) 가로길이 33% 설정
+    */
+     #main .main-item{
+     width:33%;
+     }
+     
+     /*
+       #main .main-item img에
+       1)가로길이를 100%설정
+     */
+     #main .main-item img{
+      width: 100%;
+    }
+    
+    /*
+      #main .main-item button 에 
+      1)float속성을 오른쪽
+      2) 상하좌우 패팅 5px
+      3) 가로길이 5px
+      4) 글자크기 15px
+    */
+    #main .main-item button{
+      float: right;
+      padding:5px;
+      width:80px;
+      font-size:15px;
+    }
+ </style>
+ 
+ <script type="text/javascript">
+  // 1) banner의 Text를 주기적으로 변경한다. (5초)
+  let bannerList = [
+    "국민의 은행이 되겠습니다.",
+    "5060 웰컴패키지, 최대 7만원 혜택을 드립니다.",
+    "타행이체, 자동이체 수수료 면제",
+    "저녁 6시까지 영업합니다."
+  ];
+
+  let bannerIndex = 0;
+
+  onload=function(){
+    let time =setInterval(timer, 5000);
+    timer();
+    function timer(){
+      bannerIndex = (bannerIndex + 1) % bannerList.length;
+        document.querySelector("#banner").innerHTML = bannerList[bannerIndex];
+    }
+
+  }
+
+ 
+  // 2) main의 main-item class에 data-main-item-id를 추가하고 각 버튼에 main-item-btn class를 추가한다.
+  // 각 버튼을 click 하면 data-main-item-id의 값을 console.log()로 출력한다.
+
+  document.querySelectorAll(".main-item-btn").forEach(function(item, index){
+    item.onclick=function(){
+      let id = item.closest(".main-item").getAttribute("data-main-item_id");
+      alert(id);
+    };
+  });
+
+/*
+  document.addEventListener('DOMContentLoaded', function() {
+    const mainItemButtons = document.querySelectorAll('.main-item-btn');
+
+    mainItemButtons.forEach(function(button) {
+      button.addEventListener('click', function(event) {
+        const mainItem = button.closest('.main-item');
+        const mainItemId = mainItem.getAttribute('data-main-item-id');
+        console.log(mainItemId);
+      });
+    });
+  });*/
+</script>
+
+</head>
+<body>
+  <div id="container">
+    
+    <nav id="navbar">
+    <!-- 5개의 메뉴생성 -->
+      <ul>
+        <li class="nav-item logo"><img src="images/logo.jpg" alt="로고입니다." ></li>
+        <li class="nav-item"> <a href="personal.html">개인</a></li>
+        <li class="nav-item"><a href="busines.html">기업</a></li>
+        <li class="nav-item"><a href="login.html">로그인</a></li>
+        <li class="nav-item"><a href="register.html">회원가입</a></li>
+      </ul>
+    </nav>
+    
+    <div id="banner"></div> 
+    
+    <div id="main">
+    
+     <!-- 총 3개의 서브영역 -->
+      <div class="main-item" data-main-item-id="10">
+        <img src="https://picsum.photos/200" alt="">
+         <h2>main-item 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <button class="main-item-btn">button 1</button>
+      </div>
+      
+      <div class="main-item" data-main-item-id="20">
+        <img src="https://picsum.photos/200" alt="">
+         <h2>main-item 2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <button class="main-item-btn">button 2</button>
+      </div>
+      
+      
+      
+      <div class="main-item" data-main-item-id="30">
+        <img src="https://picsum.photos/200" alt="">
+        <h2>main-item 3</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <button class="main-item-btn">button 3</button>
+      </div>
+      
+   </div>
+    
+    <footer>
+      <ul>
+        <li>서울시 선릉역 We-Work</li>
+        <li>02-0000-0000</li>
+      </ul>
+    </footer>
+    
+  </div>
+  
+</body>
+</html>

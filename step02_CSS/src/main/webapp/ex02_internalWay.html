@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	/*css area*/
+	/*태그에 적용하기*/
+	h3{
+		color: red;
+		background-color: yellow;
+	}
+	
+	/*여러태그에 같은 css적용 */
+	h1, h3{
+		font-family: 궁서체;
+		font-style: italic;
+	}
+	
+	/*id로 적용하기 - 하나의 element에만 적용가능*/
+	#a{
+		padding: 20px;
+	}
+	
+	/*class로 적용하기 : 여러 element에 적용가능 한 element에 여러 개의 class 적용가능하다*/
+	.a{
+		text-decoration: underline;
+	}
+	.b{
+		width: 500px;
+		height: 150px;
+	}
+	
+	/*자식(>) OR 자손( ) OR 인접한 형제노드(+)*/
+	div>p{color: red;}
+	
+	
+	/*6 []속성으로 찾기*/
+	[type]{
+		border: 2px blue dashed;
+	}
+	[type=password]{
+		border: 5px red double;
+	}
+	[name$=d]{
+		background-color: pink;
+	}
+	[name^=n]{
+		background-color: skyblue;
+	}
+	
+	/*table적용*/
+	table{
+		width: 800px;
+		height: 500;
+		border: 3px skyblue outset;
+		border-collapse: collapse;
+	}
+	td{
+		border: 1px gray solid;
+		text-align: center;
+		vertical-align: bottom;
+		
+	}
+	
+	table tr:nth-child(2n){
+		background-color: pink;
+	}
+	
+	table tr td:first-child{
+		width: 50px;
+	}
+	table tr td:last-child{
+		width: 100px;
+	}
+	body > table > tbody > tr:nth-child(5) > td:nth-child(2){
+		color: green; font-size: 30px;
+	}
+	
+</style>
+</head>
+<body>
+<!-- 2. css Internal 방법으로 적용하기 -->
+	<h1>HELLO</h1>
+	<h3 id="a" class="a b">CSS 적용하는 방법 2</h3>
+	<h3 >CSS 적용하는 방법 2</h3>
+	<h3 class="a">CSS 적용하는 방법 2</h3>
+	
+	
+	<hr>
+	<form>
+		아이디 : <input type="text" name="id"><br>
+		비번 : <input type="password" name="pwd"><br>
+		이름 : <input type="text" name="name"><br>
+	</form>
+	
+	<hr>
+	<table>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+  </table>
+	
+</body>
+</html>

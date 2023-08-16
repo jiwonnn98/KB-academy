@@ -1,0 +1,52 @@
+package kb.servlet;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet 작성하는 방법
+ * 1) HttpServlet 상속
+ * 2) public class 
+ * 3) 필요 메소드 재정의
+ * 4)web.xml or @annocation 등록
+ */
+public class LifeCycleServlet extends HttpServlet {
+	
+	public LifeCycleServlet() {
+		System.out.println("constructor");
+	}
+	
+	@Override
+	public void init() throws ServletException {
+		System.out.println("LifeCycleServlet init call...");
+
+	}
+	
+	@Override
+	protected void service(HttpServletRequest arg0, HttpServletResponse arg1) throws ServletException, IOException {
+		System.out.println("LifeCycleServlet service call...");
+
+	}
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		System.out.println("LifeCycleServlet doGet call...");
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		System.out.println("LifeCycleServlet doPost call...");
+
+	}
+
+	@Override
+	public void destroy() {
+		System.out.println("LifeCycleServlet destroy call...");
+
+	}
+	
+}
