@@ -9,7 +9,7 @@
 <body>
 <h2> 회원 인증 Page</h2>
 
-<form method="get" action="login">
+<form method="get" action="${pageContext.request.contextPath}/login">
   ID : <input type="text" name="userId" /><br/>
   PWD : <input type="password" name="userPwd" /></br/>
   NAME : <input type="text" name="userName" /></br/>
