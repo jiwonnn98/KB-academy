@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
     <typeInfo handle="=step05_servlet/C:\/Users\/jiwon\/Desktop\/TOOL\/apache-tomcat-9.0.78\/lib\/servlet-api.jar=/javadoc_location=/https:\/\/javaee.github.io\/javaee-spec\/javadocs\/=/=/owner.project.facets=/jst.web=/&lt;javax.servlet.http(HttpServlet.class[HttpServlet" modifiers="1057" timestamp="1688444144000"/>
+    <typeInfo handle="=BE_WS_03/src\/main\/java&lt;service{BannerService.java[BannerService" modifiers="513" timestamp="1692276029482"/>
+    <typeInfo handle="=BE_WS_03/src\/main\/java&lt;dao{BannerDao.java[BannerDao" modifiers="513" timestamp="1692276188829"/>
+    <typeInfo handle="=BE_WS_03/C:\/Users\/jiwon\/Desktop\/TOOL\/apache-tomcat-9.0.78\/lib\/tomcat-websocket.jar=/javadoc_location=/https:\/\/tomcat.apache.org\/tomcat-9.0-doc\/api\/=/=/owner.project.facets=/jst.web=/&lt;org.apache.tomcat.websocket(BackgroundProcess.class[BackgroundProcess" modifiers="1537" timestamp="1688444144000"/>
 </typeInfoHistroy>
